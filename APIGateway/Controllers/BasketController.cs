@@ -1,4 +1,6 @@
-﻿using APIGateway.Models;
+﻿using AllProductsService.Protos;
+using APIGateway.Services;
+using Google.Protobuf;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,27 +10,37 @@ namespace APIGateway.Controllers
     [ApiController]
     public class BasketController : ControllerBase
     {
-        [HttpPost("add")]
-        public IActionResult AddProductToCart([FromBody] BasketRequest request)
+        private RabbitMQService rabbitMQService;
+        public BasketController(RabbitMQService rabbitMQService)
         {
+            this.rabbitMQService = rabbitMQService;
+        }
+
+        [HttpPost("add")]
+        public async Task<IActionResult> AddProductToCart([FromBody] AddToCartRequest request)
+        {
+            await rabbitMQService.SendMessage("AddToCartRequests", request.ToByteArray());
             return Ok();
         }
 
         [HttpPost("remove")]
-        public IActionResult RemoveProductFromCart([FromBody] BasketRequest request)
-        { 
+        public async Task<IActionResult> RemoveProductFromCart([FromBody] RemoveFromCartRequest request)
+        {
+            await rabbitMQService.SendMessage("RemoveFromCartRequests", request.ToByteArray());
             return Ok();
         }
 
         [HttpPost("status")]
-        public IActionResult GetProductStatusFromCart([FromBody] BasketRequest request)
+        public async Task<IActionResult> GetProductStatusFromCart([FromBody] ProductsStatusRequest request)
         {
+            await rabbitMQService.SendMessage("ProductStatusRequests", request.ToByteArray());
             return Ok();
         }
 
         [HttpPost("buy")]
-        public IActionResult BuyProductFromCart([FromBody] BasketRequest request)
+        public async Task<IActionResult> BuyProductFromCart([FromBody] BuyProductRequest request)
         {
+            await rabbitMQService.SendMessage("BuyProductRequests", request.ToByteArray());
             return Ok();
         }
     }

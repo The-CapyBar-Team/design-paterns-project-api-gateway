@@ -18,7 +18,7 @@ message ProductStockList {
 // AllProductsService -> BasketLoadBalancer (when the stock of product has changed)
 message ProductStockInfo {
 	int32 productId = 1;
-	uint32 newStock = 2;
+	uint32 stockChange = 2;
 }
 
 // AllProductsService -> APIGateway
@@ -45,11 +45,9 @@ message RemoveFromCartRequest {
 }
 
 // BasketLoadBalancer -> APIGateway (when queue position is changed in the basketService and we need to noify the user)
-message QueuePositionUpdate {
+message QueuePositionUpdateMessage {
 	string userId = 1;
-	int32 productId = 2;
-	optional uint32 queuePosition = 3;
-	optional google.protobuf.Timestamp acquisitionTime = 4;
+	QueuePositionUpdate updateMessage = 2;
 }
 
 // BasketLoadBalancer -> APIGateway (when timer of product holding has run out and we need to noify the user)
@@ -69,8 +67,15 @@ message ProductStatusRequest {
 
 // BasketLoadBalancer -> APIGateway (when product status has been updated while user was away)
 message ProductStatusUpdate {
-	repeated QueuePositionUpdate newQueuePositions = 1;
-	repeated LostProduct lostProducts = 2;
+	string userId = 1;
+	repeated QueuePositionUpdate newQueuePositions = 2;
+	repeated int32 lostProducts = 3;
+}
+
+message QueuePositionUpdate {
+	int32 productId = 1;
+	optional uint32 queuePosition = 2;
+	optional int64 acquisitionTime = 3;
 }
 
 // APIGateway -> BasketLoadBalancer

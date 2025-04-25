@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSignalR();
 
 Env.Load();
 
@@ -26,18 +27,29 @@ builder.Services.AddSingleton<RabbitMQService>(serviceProvider =>
     var rabbitMQPassword = Env.GetString("RABBITMQ_PASSWORD");
 
     var rabbitMQService = new RabbitMQService(rabbitMQHost, rabbitMQPort, rabbitMQUser, rabbitMQPassword);
+
     rabbitMQService.DeclareQueue("AllproductsRequests").GetAwaiter().GetResult();
     rabbitMQService.DeclareQueue("AllproductsResponses").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("AddToCartRequests").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("RemoveFromCartRequests").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("ProductStatusRequests").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("BuyProductRequests").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("AddProductDBRequests").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("UpdateProductDBRequests").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("QueuePositionUpdates").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("LostProducts").GetAwaiter().GetResult();
+    rabbitMQService.DeclareQueue("ProductStatusUpdates").GetAwaiter().GetResult();
+
     rabbitMQService.SubscribeToQueue("AllproductsResponses", resp =>
     {
         var responseTracker = serviceProvider.GetService<ResponseTracker>();
-        var products = ProductListProto.Parser.ParseFrom(resp);
+        var products = AllProductsResponse.Parser.ParseFrom(resp);
         responseTracker?.CompleteRequest(products.RequestId, resp);
     });
     return rabbitMQService;
 });
 
-
+builder.Services.AddHostedService<NotificationService>();
 
 var app = builder.Build();
 
@@ -46,6 +58,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.MapHub<NotificationHub>("/notifications");
 
 app.UseHttpsRedirection();
 
