@@ -3,12 +3,16 @@ services:
     build:
       dockerfile: ./APIGateway/Dockerfile
       context: .
-    env_file:
-      - ./APIGateway/.env
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_MANAGEMENT_PORT=15672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASSWORD=guest
+    ports:
+      - "5140:5140"
+      - "8080:8080"
+      - "8081:8081"
     restart: always
     networks:
-      - microservice_network2
-
-networks:
-  microservice_network2:
-    driver: bridge
+      - microservice_network
