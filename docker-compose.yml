@@ -1,0 +1,14 @@
+services:
+  api_gateway:
+    build:
+      dockerfile: ./APIGateway/Dockerfile
+      context: .
+    env_file:
+      - ./APIGateway/.env
+    restart: always
+    networks:
+      - microservice_network2
+
+networks:
+  microservice_network2:
+    driver: bridge
