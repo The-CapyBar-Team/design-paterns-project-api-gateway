@@ -31,7 +31,7 @@ namespace APIGateway.Controllers
         }
 
         [HttpPost("status")]
-        public async Task<IActionResult> GetProductStatusFromCart([FromBody] ProductsStatusRequest request)
+        public async Task<IActionResult> GetProductStatusFromCart([FromBody] ProductStatusRequest request)
         {
             await rabbitMQService.SendMessage("ProductStatusRequests", request.ToByteArray());
             return Ok();
