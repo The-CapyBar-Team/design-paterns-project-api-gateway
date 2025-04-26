@@ -37,19 +37,16 @@ namespace AllProductsService.Protos {
             "ZBgCIAEoBSJZChpRdWV1ZVBvc2l0aW9uVXBkYXRlTWVzc2FnZRIOCgZ1c2Vy",
             "SWQYASABKAkSKwoNdXBkYXRlTWVzc2FnZRgCIAEoCzIULlF1ZXVlUG9zaXRp",
             "b25VcGRhdGUiMAoLTG9zdFByb2R1Y3QSDgoGdXNlcklkGAEgASgJEhEKCXBy",
-            "b2R1Y3RJZBgCIAEoBSJGChVQcm9kdWN0c1N0YXR1c1JlcXVlc3QSLQoOc3Rh",
-            "dHVzUmVxdWVzdHMYASADKAsyFS5Qcm9kdWN0U3RhdHVzUmVxdWVzdCI5ChRQ",
-            "cm9kdWN0U3RhdHVzUmVxdWVzdBIOCgZ1c2VySWQYASABKAkSEQoJcHJvZHVj",
-            "dElkGAIgASgFImwKE1Byb2R1Y3RTdGF0dXNVcGRhdGUSDgoGdXNlcklkGAEg",
-            "ASgJEi8KEW5ld1F1ZXVlUG9zaXRpb25zGAIgAygLMhQuUXVldWVQb3NpdGlv",
-            "blVwZGF0ZRIUCgxsb3N0UHJvZHVjdHMYAyADKAUiiAEKE1F1ZXVlUG9zaXRp",
-            "b25VcGRhdGUSEQoJcHJvZHVjdElkGAEgASgFEhoKDXF1ZXVlUG9zaXRpb24Y",
-            "AiABKA1IAIgBARIcCg9hY3F1aXNpdGlvblRpbWUYAyABKANIAYgBAUIQCg5f",
-            "cXVldWVQb3NpdGlvbkISChBfYWNxdWlzaXRpb25UaW1lIjYKEUJ1eVByb2R1",
-            "Y3RSZXF1ZXN0Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAUi",
-            "OQoURGVjcmVhc2VTdG9ja1JlcXVlc3QSDgoGdXNlcklkGAEgASgJEhEKCXBy",
-            "b2R1Y3RJZBgCIAEoBUIcqgIZQWxsUHJvZHVjdHNTZXJ2aWNlLlByb3Rvc2IG",
-            "cHJvdG8z"));
+            "b2R1Y3RJZBgCIAEoBSImChRQcm9kdWN0U3RhdHVzUmVxdWVzdBIOCgZ1c2Vy",
+            "SWQYASABKAkiVgoTUHJvZHVjdFN0YXR1c1VwZGF0ZRIOCgZ1c2VySWQYASAB",
+            "KAkSLwoRbmV3UXVldWVQb3NpdGlvbnMYAiADKAsyFC5RdWV1ZVBvc2l0aW9u",
+            "VXBkYXRlIogBChNRdWV1ZVBvc2l0aW9uVXBkYXRlEhEKCXByb2R1Y3RJZBgB",
+            "IAEoBRIaCg1xdWV1ZVBvc2l0aW9uGAIgASgNSACIAQESHAoPYWNxdWlzaXRp",
+            "b25UaW1lGAMgASgDSAGIAQFCEAoOX3F1ZXVlUG9zaXRpb25CEgoQX2FjcXVp",
+            "c2l0aW9uVGltZSI2ChFCdXlQcm9kdWN0UmVxdWVzdBIOCgZ1c2VySWQYASAB",
+            "KAkSEQoJcHJvZHVjdElkGAIgASgFIjkKFERlY3JlYXNlU3RvY2tSZXF1ZXN0",
+            "Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAVCHKoCGUFsbFBy",
+            "b2R1Y3RzU2VydmljZS5Qcm90b3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -62,9 +59,8 @@ namespace AllProductsService.Protos {
             new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.RemoveFromCartRequest), global::AllProductsService.Protos.RemoveFromCartRequest.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.QueuePositionUpdateMessage), global::AllProductsService.Protos.QueuePositionUpdateMessage.Parser, new[]{ "UserId", "UpdateMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.LostProduct), global::AllProductsService.Protos.LostProduct.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.ProductsStatusRequest), global::AllProductsService.Protos.ProductsStatusRequest.Parser, new[]{ "StatusRequests" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.ProductStatusRequest), global::AllProductsService.Protos.ProductStatusRequest.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.ProductStatusUpdate), global::AllProductsService.Protos.ProductStatusUpdate.Parser, new[]{ "UserId", "NewQueuePositions", "LostProducts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.ProductStatusRequest), global::AllProductsService.Protos.ProductStatusRequest.Parser, new[]{ "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.ProductStatusUpdate), global::AllProductsService.Protos.ProductStatusUpdate.Parser, new[]{ "UserId", "NewQueuePositions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.QueuePositionUpdate), global::AllProductsService.Protos.QueuePositionUpdate.Parser, new[]{ "ProductId", "QueuePosition", "AcquisitionTime" }, new[]{ "QueuePosition", "AcquisitionTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.BuyProductRequest), global::AllProductsService.Protos.BuyProductRequest.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AllProductsService.Protos.DecreaseStockRequest), global::AllProductsService.Protos.DecreaseStockRequest.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null)
@@ -2241,193 +2237,6 @@ namespace AllProductsService.Protos {
   /// APIGateway -> BasketLoadBalancer (when user wants to check the status of the product)
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class ProductsStatusRequest : pb::IMessage<ProductsStatusRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ProductsStatusRequest> _parser = new pb::MessageParser<ProductsStatusRequest>(() => new ProductsStatusRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ProductsStatusRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[9]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ProductsStatusRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ProductsStatusRequest(ProductsStatusRequest other) : this() {
-      statusRequests_ = other.statusRequests_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ProductsStatusRequest Clone() {
-      return new ProductsStatusRequest(this);
-    }
-
-    /// <summary>Field number for the "statusRequests" field.</summary>
-    public const int StatusRequestsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::AllProductsService.Protos.ProductStatusRequest> _repeated_statusRequests_codec
-        = pb::FieldCodec.ForMessage(10, global::AllProductsService.Protos.ProductStatusRequest.Parser);
-    private readonly pbc::RepeatedField<global::AllProductsService.Protos.ProductStatusRequest> statusRequests_ = new pbc::RepeatedField<global::AllProductsService.Protos.ProductStatusRequest>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::AllProductsService.Protos.ProductStatusRequest> StatusRequests {
-      get { return statusRequests_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ProductsStatusRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ProductsStatusRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!statusRequests_.Equals(other.statusRequests_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= statusRequests_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      statusRequests_.WriteTo(output, _repeated_statusRequests_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      statusRequests_.WriteTo(ref output, _repeated_statusRequests_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += statusRequests_.CalculateSize(_repeated_statusRequests_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ProductsStatusRequest other) {
-      if (other == null) {
-        return;
-      }
-      statusRequests_.Add(other.statusRequests_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            statusRequests_.AddEntriesFrom(input, _repeated_statusRequests_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            statusRequests_.AddEntriesFrom(ref input, _repeated_statusRequests_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductStatusRequest : pb::IMessage<ProductStatusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2442,7 +2251,7 @@ namespace AllProductsService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2463,7 +2272,6 @@ namespace AllProductsService.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProductStatusRequest(ProductStatusRequest other) : this() {
       userId_ = other.userId_;
-      productId_ = other.productId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2485,18 +2293,6 @@ namespace AllProductsService.Protos {
       }
     }
 
-    /// <summary>Field number for the "productId" field.</summary>
-    public const int ProductIdFieldNumber = 2;
-    private int productId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ProductId {
-      get { return productId_; }
-      set {
-        productId_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2513,7 +2309,6 @@ namespace AllProductsService.Protos {
         return true;
       }
       if (UserId != other.UserId) return false;
-      if (ProductId != other.ProductId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2522,7 +2317,6 @@ namespace AllProductsService.Protos {
     public override int GetHashCode() {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (ProductId != 0) hash ^= ProductId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2545,10 +2339,6 @@ namespace AllProductsService.Protos {
         output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (ProductId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(ProductId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2563,10 +2353,6 @@ namespace AllProductsService.Protos {
         output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (ProductId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(ProductId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2579,9 +2365,6 @@ namespace AllProductsService.Protos {
       int size = 0;
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
-      }
-      if (ProductId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProductId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2597,9 +2380,6 @@ namespace AllProductsService.Protos {
       }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
-      }
-      if (other.ProductId != 0) {
-        ProductId = other.ProductId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2624,10 +2404,6 @@ namespace AllProductsService.Protos {
             UserId = input.ReadString();
             break;
           }
-          case 16: {
-            ProductId = input.ReadInt32();
-            break;
-          }
         }
       }
     #endif
@@ -2649,10 +2425,6 @@ namespace AllProductsService.Protos {
             break;
           case 10: {
             UserId = input.ReadString();
-            break;
-          }
-          case 16: {
-            ProductId = input.ReadInt32();
             break;
           }
         }
@@ -2680,7 +2452,7 @@ namespace AllProductsService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2702,7 +2474,6 @@ namespace AllProductsService.Protos {
     public ProductStatusUpdate(ProductStatusUpdate other) : this() {
       userId_ = other.userId_;
       newQueuePositions_ = other.newQueuePositions_.Clone();
-      lostProducts_ = other.lostProducts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2735,17 +2506,6 @@ namespace AllProductsService.Protos {
       get { return newQueuePositions_; }
     }
 
-    /// <summary>Field number for the "lostProducts" field.</summary>
-    public const int LostProductsFieldNumber = 3;
-    private static readonly pb::FieldCodec<int> _repeated_lostProducts_codec
-        = pb::FieldCodec.ForInt32(26);
-    private readonly pbc::RepeatedField<int> lostProducts_ = new pbc::RepeatedField<int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<int> LostProducts {
-      get { return lostProducts_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2763,7 +2523,6 @@ namespace AllProductsService.Protos {
       }
       if (UserId != other.UserId) return false;
       if(!newQueuePositions_.Equals(other.newQueuePositions_)) return false;
-      if(!lostProducts_.Equals(other.lostProducts_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2773,7 +2532,6 @@ namespace AllProductsService.Protos {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       hash ^= newQueuePositions_.GetHashCode();
-      hash ^= lostProducts_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2797,7 +2555,6 @@ namespace AllProductsService.Protos {
         output.WriteString(UserId);
       }
       newQueuePositions_.WriteTo(output, _repeated_newQueuePositions_codec);
-      lostProducts_.WriteTo(output, _repeated_lostProducts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2813,7 +2570,6 @@ namespace AllProductsService.Protos {
         output.WriteString(UserId);
       }
       newQueuePositions_.WriteTo(ref output, _repeated_newQueuePositions_codec);
-      lostProducts_.WriteTo(ref output, _repeated_lostProducts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2828,7 +2584,6 @@ namespace AllProductsService.Protos {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       size += newQueuePositions_.CalculateSize(_repeated_newQueuePositions_codec);
-      size += lostProducts_.CalculateSize(_repeated_lostProducts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2845,7 +2600,6 @@ namespace AllProductsService.Protos {
         UserId = other.UserId;
       }
       newQueuePositions_.Add(other.newQueuePositions_);
-      lostProducts_.Add(other.lostProducts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2871,11 +2625,6 @@ namespace AllProductsService.Protos {
           }
           case 18: {
             newQueuePositions_.AddEntriesFrom(input, _repeated_newQueuePositions_codec);
-            break;
-          }
-          case 26:
-          case 24: {
-            lostProducts_.AddEntriesFrom(input, _repeated_lostProducts_codec);
             break;
           }
         }
@@ -2905,11 +2654,6 @@ namespace AllProductsService.Protos {
             newQueuePositions_.AddEntriesFrom(ref input, _repeated_newQueuePositions_codec);
             break;
           }
-          case 26:
-          case 24: {
-            lostProducts_.AddEntriesFrom(ref input, _repeated_lostProducts_codec);
-            break;
-          }
         }
       }
     }
@@ -2933,7 +2677,7 @@ namespace AllProductsService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3239,7 +2983,7 @@ namespace AllProductsService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3477,7 +3221,7 @@ namespace AllProductsService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::AllProductsService.Protos.MessagesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

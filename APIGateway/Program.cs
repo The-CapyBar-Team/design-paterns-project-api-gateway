@@ -51,6 +51,17 @@ builder.Services.AddSingleton<RabbitMQService>(serviceProvider =>
 
 builder.Services.AddHostedService<NotificationService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazorApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:5185")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,11 +70,13 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapHub<NotificationHub>("/notifications");
+app.MapHub<NotificationHub>("api/notifications");
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowBlazorApp");
 
 app.MapControllers();
 
