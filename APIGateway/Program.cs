@@ -53,12 +53,11 @@ builder.Services.AddHostedService<NotificationService>();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowBlazorApp", policy =>
+    options.AddPolicy("AllowAll", builder =>
     {
-        policy.WithOrigins("http://localhost:5185")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
     });
 });
 
@@ -76,7 +75,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseCors("AllowBlazorApp");
+app.UseCors("AllowAll");
 
 app.MapControllers();
 
